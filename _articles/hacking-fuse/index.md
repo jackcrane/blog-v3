@@ -188,7 +188,7 @@ After a few lines of network handling and cleanup, we process this to a useful J
 
 ## Network sniffing: Printer camera feed
 
-The whole goal is to get the printer's camera feed. This one was a bit more challenging to figure out, but starting with network capture:
+The whole goal is to get the printer's camera feed. This one was a bit more challenging to figure out, but I again started with a network capture and identified lots of websocket activity that started once I launched the camera feed viewer in PreForm. I started reading the data sent across in the first few packets hoping to find a handshake or a request to start a feed. This was the first packet in the exchange:
 
 ```text :linenos :linenosoverride=0000,0010,0020,0030,0040,0050,0060,0070 :filename="WS Client to Printer (10.120.8.59 to 10.120.8.38) | Websocket Init"
 9c 53 22 86 98 ea 38 0a ab 95 fa 20 08 00 45 00   .S"...8.... ..E.
@@ -210,7 +210,7 @@ Connected (press CTRL+C to quit)
 >
 ```
 
-That just seemed to send the message into a black hole. Then I sent `{"action":"start"}`:
+That just seemed to send the message into a black hole. Then I guessed at some other actions, and sent `{"action":"start"}`:
 
 ```
 > {"action":"start"}
@@ -220,8 +220,27 @@ $.' ",#(7),01444'9=82<.342��C
 ���}!1AQa"q2��#B��R��$3br� %&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz����������������������
 ```
 
-It's response was a whole lot of gibberish, except for the first line advertising JFIF. We got an image! Finally, all we had to do was pipe those images into a video file, and we would be off!
+It's response was a whole lot of gibberish, except for the first line advertising JFIF. We got an image! Finally, all we had to do was pipe those images into a video file, and we had our recorder done!
 
 <video controls autoplay muted loop playsinline>
   <source src="print-trim-c.mp4">
 </video>
+
+## Making it useful
+
+Referring back to the original objective and definition of a solution, we needed
+
+1. Easy and effortless to start/access a recording
+2. Gets out of the way when we don't want to record a print
+3. Approachable by people who are technical, but not necessarily software people
+4. Something that does not interfere with the existing printing process or workflow
+
+Sending someone to manually open a websocket connection to a random IP address, then sending 2 "magic string" packets, then piping results into an mp4 file is not easy and effortless, is not approachable, and certainly interferes with existing workflows.
+
+Ultimately, I built it into a small utility that provides a Printer Discovery window of printers we can find on the network, and a details page with information on the printer (that we pull from that status endpoint) and a live video feed.
+
+Finally, there is a button that allows saving the live video feed to a mp4 file. When saving video files, the user can decide whether they want to end the recording manually or automatically when the printer's status switches to idle. These video files are very long and turn out to be several gigabytes on most prints, but we provides the raw video file.
+
+See my post on how I convert those video files into smooth timelapses [here](/posts/making-smooth-fuse-timelapses).
+
+The utility is available on GitHub at [jackcrane/fuse-tools](https://github.com/jackcrane/fuse-tools).
