@@ -43,7 +43,7 @@ After processing in the images, I began processing the data. I had to find a way
 
 The more I considered it, I began to realize the issues I would have distinguishing between numbers like 6 and 9, seeing that they have similar features in diferent orientations and areas. After watching [^3], I recognized that if I could break the retained and blocked water into 8 regions: the left and right halves of the original, 90 degrees clockwise, 180 degrees, and 270 degrees, I would be able to embed not only the presence of features, but the general position of said features.
 
-<video autoplay loop muted controls>
+<video autoplay loop muted controls playsinline>
   <source src="3-all-orientations.mp4" type="video/mp4">
 </video>
 
