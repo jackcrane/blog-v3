@@ -17,8 +17,8 @@ We have created a similar setup for our Stratasys J735 Polyjet printer by positi
 
 This post talks about the journey and challenges in building a recorder for our printers.
 
-<video controls autoplay muted>
-  <source src="print-trim.mp4">
+<video controls autoplay muted loop>
+  <source src="print-trim-c.mp4">
 </video>
 
 ## The problem
@@ -222,6 +222,6 @@ $.' ",#(7),01444'9=82<.342��C
 
 It's response was a whole lot of gibberish, except for the first line advertising JFIF. We got an image! Finally, all we had to do was pipe those images into a video file, and we would be off!
 
-<video controls autoplay muted>
-  <source src="print-trim.mp4">
+<video controls autoplay muted loop>
+  <source src="print-trim-c.mp4">
 </video>
