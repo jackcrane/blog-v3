@@ -1,0 +1,26 @@
+title: Jack's Blog
+description: Essays, notes, and writeups.
+url: https://blog.jackcrane.rocks
+theme: build-theme
+build_theme:
+  footer_text: Thoughtful stories about interesting problems
+  footer_email: jack@jackcrane.rocks
+  home_collection: articles
+  search:
+    enabled: true
+    url: /search.json
+  permalink_from_title_collections:
+    - articles
+  colocated_asset_collections:
+    - articles
+
+collections:
+  articles:
+    output: true
+    permalink: /posts/:slug/
+    sort_by: date
+
+plugins:
+  - build-theme
+  - jekyll-feed
+  - jekyll-toc
