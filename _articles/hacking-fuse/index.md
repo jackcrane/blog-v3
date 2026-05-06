@@ -15,6 +15,12 @@ For our day-to-day printing work, we use Bambu Lab filament printers. These prin
 
 We have created a similar setup for our Stratasys J735 Polyjet printer by positioning a switch that is triggered by the print head when it returns to the home position, and that switch triggers a camera to take a photo.
 
+This post talks about the journey and challenges in building a recorder for our printers.
+
+<video controls autoplay muted>
+  <source src="print-trim.mp4">
+</video>
+
 ## The problem
 
 The Fuse 1+ SLS printer does have a built-in camera, and that camera can be watched live through PreForm (Formlabs' slicer software). However, there is no built in way to record the prints or to download video recordings (unless the print fails). We have been able to get around this limitation by opening PreForm, opening the video feed, and setting a screen recorder to capture the computer screen.
