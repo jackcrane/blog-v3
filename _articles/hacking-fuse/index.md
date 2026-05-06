@@ -129,7 +129,7 @@ The printer immediately responded with its status over two packets:
 
 After a few lines of network handling and cleanup, we process this to a useful JSON object. There is a lot of data provided in these packets, and everything is below, but I have highlighted the lines that I thought were interesting.
 
-```json :highlight={2,17,21,34,35,40,48}
+```json :highlight={2,17,21,34,35,40,48} :filename="TCP Printer to Client (10.120.8.38 to 10.120.8.59) | Response with Status JSON"
 {
   "Id": "{900b362f-c6a1-40dd-aa18-13536b585a1c}",
   "Parameters": {
@@ -190,7 +190,7 @@ After a few lines of network handling and cleanup, we process this to a useful J
 
 The whole goal is to get the printer's camera feed. This one was a bit more challenging to figure out, but I again started with a network capture and identified lots of websocket activity that started once I launched the camera feed viewer in PreForm. I started reading the data sent across in the first few packets hoping to find a handshake or a request to start a feed. This was the first packet in the exchange:
 
-```text :linenos :linenosoverride=0000,0010,0020,0030,0040,0050,0060,0070 :filename="WS Client to Printer (10.120.8.59 to 10.120.8.38) | Websocket Init"
+```text :linenos :linenosoverride=0000,0010,0020,0030,0040,0050,0060,0070 :filename="WS Client to Printer (10.120.8.59 to 10.120.8.38) | Websocket Init" :highlight={5,6,7,8}
 9c 53 22 86 98 ea 38 0a ab 95 fa 20 08 00 45 00   .S"...8.... ..E.
 00 67 d4 04 40 00 40 06 41 3c 0a 78 08 26 0a 78   .g..@.@.A<.x.&.x
 08 3b 1f 94 d2 b3 1f 4f a9 cc 44 30 7b 44 80 18   .;.....O..D0{D..
