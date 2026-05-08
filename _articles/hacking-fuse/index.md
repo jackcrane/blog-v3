@@ -5,9 +5,16 @@ date: 2026-05-05
 toc: true
 author: Jack Crane
 header_effect: dither
+abstract: Eavesdropping on Fuse communication protocols to extract raw status and video.
 ---
 
 ## Introduction
+
+:::note
+
+This article pseudo-aligns with my post "[Making Smooth Fuse Timelapses](/posts/making-smooth-fuse-timelapses)" as they were done at the same time for the same project. This post focuses on acquiring and saving the video feed from the printer, and "[Making Smooth Fuse Timelapses](/posts/making-smooth-fuse-timelapses)" focuses on converting those videos into smooth timelapses.
+
+:::
 
 At the 3d printing lab I work at (Saint Louis University's Center for Additive Manufacturing), we took delivery of 2 Formlabs Fuse 1+ SLS 3d printers. These printers have been excellent from an engineering, delivery, and education perspective. A significant part of our mission is outreach and education. We have resources and equipment most people have never even imagined, much less heard of or had access to. We want to share that with as many people as possible. As such, acquiring and publishing high quality media is important to us.
 

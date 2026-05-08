@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jackcrane/build-theme.git
-  revision: 04ea85476d27eefcd6f6333d6c67a6814ccabb55
+  revision: 47c84091a62643e44c46ebbd3cd172b2a91f94c7
   branch: main
   specs:
     build-theme (1.0.0)
