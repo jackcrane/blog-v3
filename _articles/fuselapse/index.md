@@ -16,6 +16,12 @@ This article pseudo-aligns with my post "[Hacking Fuse Camera Feeds](/posts/hack
 
 :::
 
+:::important
+
+Code for this project is available on GitHub at [jackcrane/fuselapse](https://github.com/jackcrane/fuselapse)
+
+:::
+
 At the 3d printing lab I work at (Saint Louis University’s Center for Additive Manufacturing), we took delivery of 2 Formlabs Fuse 1+ SLS 3d printers. These printers have been excellent from an engineering, delivery, and education perspective. A significant part of our mission is outreach and education. We have resources and equipment most people have never even imagined, much less heard of or had access to. We want to share that with as many people as possible. As such, acquiring and publishing high quality media is important to us.
 
 Our traditional filament printers (mostly from Bambu Lab) all provide the ability to generate smooth timelapses from the slicer. We typically record these timelapses for important or interesting prints. We have built custom Arduino-driven hardware to trigger photos during Polyjet prints, and we don't typically print showcase pieces on SLA/DLP printers. That meant SLS was the only technology we had that we could not get timelapses from (but wanted to).

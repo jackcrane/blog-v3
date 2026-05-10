@@ -16,6 +16,12 @@ This article pseudo-aligns with my post "[Making Smooth Fuse Timelapses](/posts/
 
 :::
 
+:::important
+
+Code for this project is available on GitHub at [jackcrane/fuse-tools](jackcrane/fuse-tools)
+
+:::
+
 At the 3d printing lab I work at (Saint Louis University's Center for Additive Manufacturing), we took delivery of 2 Formlabs Fuse 1+ SLS 3d printers. These printers have been excellent from an engineering, delivery, and education perspective. A significant part of our mission is outreach and education. We have resources and equipment most people have never even imagined, much less heard of or had access to. We want to share that with as many people as possible. As such, acquiring and publishing high quality media is important to us.
 
 For our day-to-day printing work, we use Bambu Lab filament printers. These printers have a built in webcam that automatically records prints, and they provide a setting to create smooth timelapse videos of the print process. In these videos, it moves the print head to a consistent location for each frame, so the resulting video shows the part just magically appearing while the print head is parked.
