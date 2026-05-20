@@ -6,6 +6,7 @@ build_theme:
   footer_text: Thoughtful stories about interesting problems
   footer_email: jack@jackcrane.rocks
   home_collection: articles
+  google_analytics: G-6F85RH4DY2
   search:
     enabled: true
     url: /search.json
