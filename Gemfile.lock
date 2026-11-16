@@ -1,7 +1,5 @@
-GIT
-  remote: https://github.com/jackcrane/build-theme.git
-  revision: edde805a46238dde6e026a343fec18e072da31fa
-  branch: main
+PATH
+  remote: ../build-theme
   specs:
     build-theme (1.0.0)
       jekyll (~> 4.4)

@@ -4,7 +4,7 @@ title: Building a resilient grader
 header_effect: dither
 date: 2026-04-07
 author: Jack Crane
-abstract: A detailed look at the architecture and implementation of FeatureBench, a SolidWorks autograder.
+abstract: A detailed look at the architecture of FeatureBench, a SolidWorks autograder.
 toc: true
 ---
 

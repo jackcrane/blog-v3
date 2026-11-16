@@ -1,6 +1,39 @@
-{% comment %}
-  Injected at the end of <head> on every page. Put tracking snippets,
-  verification meta tags, extra fonts, etc. here.
-{% endcomment %}
-<script defer src="https://savory.built-by-cdp.com/script.js" data-website-id="cefc3486-8207-406d-9826-0d8ddec998a7"></script>
-<script defer src="https://savory.built-by-cdp.com/recorder.js" data-website-id="cefc3486-8207-406d-9826-0d8ddec998a7"></script>
+{% comment %} Injected at the end of
+<head>
+  on every page. Put tracking snippets, verification meta tags, extra fonts,
+  etc. here. {% endcomment %}
+  <script
+    defer
+    src="https://savory.built-by-cdp.com/script.js"
+    data-website-id="cefc3486-8207-406d-9826-0d8ddec998a7"
+  ></script>
+  <script
+    defer
+    src="https://savory.built-by-cdp.com/recorder.js"
+    data-website-id="cefc3486-8207-406d-9826-0d8ddec998a7"
+  ></script>
+  <script
+    type="module"
+    src="{{ '/assets/js/metar-tooltips.js' | relative_url }}"
+  ></script>
+  <style>
+    .metar-tip {
+      text-decoration: underline dotted;
+      text-underline-offset: 3px;
+      cursor: help;
+    }
+    .metar-tooltip {
+      position: absolute;
+      z-index: 1000;
+      max-width: 22rem;
+      padding: 0.35em 0.65em;
+      border-radius: 4px;
+      background: #1f2430;
+      color: #fff;
+      font:
+        12px/1.4 system-ui,
+        sans-serif;
+      pointer-events: none;
+    }
+  </style>
+</head>
