@@ -29,8 +29,11 @@ To alleviate some of this pressure, I created FeatureBench to take care of some 
 
 If FeatureBench is unable to match a submission to a known signature, it puts it forward for a TA to grade. This saves TAs time because they don't have to waste time grading correct assignments, they can focus their time and efforts on providing meaningful support to students.
 
-## Technical Overview
+<video playsinline controls loop muted autoplay>
+  <source src="flow-demo.mp4" />
+</video>
 
+## Technical Overview
 
 ### Architecture
 
